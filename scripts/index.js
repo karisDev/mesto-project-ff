@@ -24,7 +24,7 @@ const createCard = (item, onDelete) => {
 };
 
 // @todo: Функция удаления карточки
-const deleteCard = (event) => event.target.parentNode.remove();
+const deleteCard = (event) => event.target.closest(".card").remove();
 
 // @todo: Вывести карточки на страницу
 initialCards.forEach((item) => placesList.append(createCard(item, deleteCard)));
